@@ -27,7 +27,7 @@ function renderPersonas(data) {
     card.innerHTML = `
       <div class="card h-100" onclick="mostrarDetalle(${index})">
         <div class="card-body">
-          <h5 class="card-title">${persona["Nombre completo"]}</h5>
+          <h4 class="card-title">${persona["Nombre completo"]}</h4>
         </div>
       </div>
     `;
