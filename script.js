@@ -40,7 +40,23 @@ function renderPersonas(data) {
 
 function mostrarDetalle(index) {
   const p = window._personas[index];
-  alert(`Nombre: ${p["Nombre completo"]}\nEdad: ${p["Edad"]}\nSexo: ${p["Sexo"]}\nOcupación: ${p["Ocupación"]}\nNivel: ${p["Nivel de estudios"]}`);
+
+  document.getElementById("modalNombre").textContent = p["Nombre completo"];
+  document.getElementById("modalEdad").textContent = p["Edad"];
+  document.getElementById("modalSexo").textContent = p["Sexo"];
+  document.getElementById("modalOcupacion").textContent = p["Ocupación"];
+  document.getElementById("modalNivel").textContent = p["Nivel de estudios"];
+  
+
+  document.getElementById("modal").style.display = "block";
+
+
+
+  document.getElementById("cerrarModal").onclick = () => {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  //alert(`Nombre: ${p["Nombre completo"]}\nEdad: ${p["Edad"]}\nSexo: ${p["Sexo"]}\nOcupación: ${p["Ocupación"]}\nNivel: ${p["Nivel de estudios"]}`);
 }
 
 function setupSearch(data) {
